@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo2">
+  <div class="interlineado">Manipulación de Lista</div>
+</div>
+
+<body>
+  <form action="{{ url_for('add_element') }}" method="post">
+    <div class="form-row align-items-center">
+      <div class="col">
+        <label for="elemento" class="font-weight-bold"
+          >Agregar un elemento</label
+        >
+        <input
+          type="text"
+          name="elemento"
+          id="elemento"
+          class="form-control"
+          placeholder="Escribe aquí el elemento"
+          required
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mt-4">Agregar</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="interlineado"></div>
+
+  <h2 class="estado2 text-center">Lista Actual:</h2>
+  <ul class="list-group mb-4">
+    {% for item in lista %}
+    <li class="list-group-item text-center">{{ item }}</li>
+    {% endfor %}
+  </ul>
+
+  <div class="text-center mb-4">
+    <h3 class="interlineado">Operaciones</h3>
+    <a href="{{ url_for('pop_stack') }}" class="btn btn-primary m-2"
+      >Eliminar como Pila (LIFO)</a
+    >
+    <a href="{{ url_for('pop_queue') }}" class="btn btn-primary m-2"
+      >Eliminar como Cola (FIFO)</a
+    >
+    <a href="{{ url_for('view_tree') }}" class="btn btn-primary m-2"
+      >Ver como Árbol</a
+    >
+  </div>
+
+  {% if tree_structure %}
+  <h3 class="estado2 text-center mt-4">Estructura como Árbol:</h3>
+  <ul class="list-group">
+    {% for node in tree_structure %}
+    <li class="list-group-item">
+      <strong>Nodo:</strong> {{ node.value }} |
+      <strong>Hijo Izquierdo:</strong> {{ node.left if node.left else 'Ninguno'
+      }} | <strong>Hijo Derecho:</strong> {{ node.right if node.right else
+      'Ninguno' }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="d-flex justify-content-center mt-5">
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+  </div>
+</body>
+
+{% endblock %}

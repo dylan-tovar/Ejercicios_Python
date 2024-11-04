@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<div class="titulo">Materia Prima</div>
+
+<div class="interlineado2">
+  <div class="pregunta">{{ mensaje }}</div>
+</div>
+
+{% if decision == 'si' %}
+<div class="centrar">
+  <div class="interlineado">
+    <form action="{{ url_for('pagar') }}" method="POST">
+      <button type="submit" class="btn btn-primary">Confirmar Pago</button>
+    </form>
+  </div>
+</div>
+{% endif %}
+<div class="centrar">
+  <a href="{{ url_for('programa5') }}" class="btn btn-primary"
+    >Volver al inicio</a
+  >
+</div>
+{% endblock %}

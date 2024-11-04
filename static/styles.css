@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.f2 {
+    color: #000000 !important;
+    font-size: 20px !important;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+div.titulo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000 !important;
+    font-size: 65px !important;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+div.titulo2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000 !important;
+    font-size: 45px !important;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+div.interlineado{
+    margin-bottom: 20px;
+}
+
+div.luna{
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+
+
+li {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 15px 0;
+    font-size: 20px;
+    
+}
+
+cuadrado {
+    text-align: center;
+    display: inline-block; /* Para que el padding funcione */
+    width: 300px; /* Ancho fijo para todos los botones */
+    padding: 10px 15px; /* Espaciado interno */
+    text-decoration: none;
+    color: #fff; /* Color del texto */
+    background-color: #a8d5f052; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+menu {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 3px;
+  
+
+  }
+
+fondo {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+sombra {
+    margin: 70px 0;
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el borde redondeado funcione */
+}
+
+div.centrar{
+    text-align: center;
+}
+div.size5{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+div.size6{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+div.resultado{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+   margin-top: 10px;
+}
+div.pregunta{
+
+ margin-bottom: 5px;
+ font-size: 25px;
+ font-family: monospace;
+}
+
+div.espacio{
+ margin-top: 50px;
+
+}
+div.pregunta2{
+
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: monospace;
+   }
+
+   div.espaci2{
+    margin-top: 50px;
+   
+   }
+
+   div.espacio{
+
+      position: absolute;
+      text-align: center;
+   }
+
+   div.interlineado2{
+      margin-bottom: 40px;
+   }
+
+   div.inline-form {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #87a9e9;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+input[type="number"] {
+    width: 60px; /* Ancho del campo de cantidad */
+}
+
+div.Bc{
+    color: #ffffff;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    color: #2C3E50;
+}
+.estado {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+}
+
+div.estado2{
+
+    margin-top: 25px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.custom-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.custom-select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.custom-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    
+        <h1>Calculadora de la Resolvente</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="a">Ingrese el valor de a:</label>
+                <input type="number" step="any" class="form-control" id="a" name="a" required>
+            </div>
+            <div class="form-group">
+                <label for="b">Ingrese el valor de b:</label>
+                <input type="number" step="any" class="form-control" id="b" name="b" required>
+            </div>
+            <div class="form-group">
+                <label for="c">Ingrese el valor de c:</label>
+                <input type="number" step="any" class="form-control" id="c" name="c" required>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Calcular Raíces</button>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+            </div>
+
+        </form>
+
+        {% if resultados %}
+            <div class="mt-4 alert alert-info">
+                {{ resultados }}
+            </div>
+        {% endif %}
+    
+</body>
+</html>
+{% endblock %}

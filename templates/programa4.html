@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class="titulo"><div class="interlineado"> Tu lampara no funciona? </div></div>
+
+    {% if not mensaje %}
+        <form method="POST" action="/lampara">
+            <div class="pregunta">¿Está enchufada la lámpara?</div> 
+            <label>
+                <input type="radio" name="enchufada" value="si" required> Sí
+            </label>
+            <label>
+                <input type="radio" name="enchufada" value="no"> No
+            </label>
+            <br><br>
+
+            <div class="pregunta">¿Está quemado el bombillo?</div>
+            <label>
+                <input type="radio" name="quemada" value="si" required> Sí
+            </label>
+            <label>
+                <input type="radio" name="quemada" value="no"> No
+            </label>
+            <br><br>
+
+            <div class="pregunta">¿Ves algún cable roto?</div>
+            <label>
+                <input type="radio" name="cable_roto" value="si" required> Sí
+            </label>
+            <label>
+                <input type="radio" name="cable_roto" value="no"> No
+            </label>
+            <br><br>
+            
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary" value="Solucionar">
+                &nbsp;&nbsp;&nbsp;&nbsp; 
+             <form action="{{ url_for('menu') }}" method="GET">
+                <button type="submit" class= "btn btn-primary" calas>Ir al Menú</button>
+             </form>
+            </div>
+        </form>
+    {% else %}
+        <div class="f2">
+            <h2>Resultado:</h2>
+            <p>{{ mensaje }}</p>
+        </div>
+        <div class="d-flex justify-content-center">
+         <form action="{{ url_for('menu') }}" method="GET">
+            <button type="submit" class= "btn btn-primary" calas>Ir al Menú</button>
+         </form>
+        </div>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

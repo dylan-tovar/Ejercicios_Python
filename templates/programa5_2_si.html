@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo"><div class="interlineado">Producuion</div></div>
+
+<div class="centrar">
+  <div class="pregunta2"><div class="interlineado2">Empaquetando...</div></div>
+
+  <form action="{{ url_for('almacen') }}" method="POST">
+    <button type="submit" class="btn btn-primary" name="almacen" value="no">
+      LLevar al almancen
+    </button>
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+  </form>
+</div>
+
+{% endblock %}

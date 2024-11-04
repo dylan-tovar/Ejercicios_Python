@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %}Gestión de Inventario{% endblock %}
+{% block content %}
+<div class="titulo">Gestión de Inventario</div>
+
+<div class="f2">Seleccione una Opción</div>
+<form action="{{ url_for('programa1_2') }}" method="GET">
+  <button type="submit" name="accion" value="agregar" class="btn btn-primary">
+    Añadir Producto
+  </button>
+  <button type="submit" name="accion" value="comprar" class="btn btn-primary">
+    Comprar Producto
+  </button>
+</form>
+
+{% endblock %}

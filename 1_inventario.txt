@@ -1,0 +1,7 @@
+hilux 13
+fortuner 0
+forRunner 5
+machito 7
+ludivmax 2
+aveo 10
+focus 1

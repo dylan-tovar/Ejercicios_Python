@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <div class="titulo">Cocinar un Huevo</div>
+        <form action="/cocinar" method="post">
+            <div class="f2">Elige el método de cocción:</div>
+            &nbsp;&nbsp;&nbsp;&nbsp; 
+            <button type="submit" name="metodo" margen value="frito" class="btn btn-primary">Frito</button>
+            &nbsp;&nbsp;&nbsp;&nbsp; 
+            <button type="submit" name="metodo" value="hervido" class="btn btn-primary" style="margin-right: 5px;">Hervido</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

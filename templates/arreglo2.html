@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="titulo2"><div class="interlineado"> Estados y Municipios de Venezuela</div></div>
+<body>
+  
+    <form method="POST">
+        <div class="form-group">
+            <label for="estado" class="font-weight-bold">Selecciona un Estado</label>
+            <select name="estado" id="estado" class="form-control">
+                <option value="">--Seleccione un Estado--</option>
+                {% for estado in estados %}
+                    <option value="{{ estado.nombre }}" {% if estado.nombre == selected_estado %}selected{% endif %}>{{ estado.nombre }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Mostrar Municipios</button>
+    </form>
+
+    <div class="interlineado"></div>
+
+    {% if municipios %}
+        <div class="estado2">Municipios del Estado {{ selected_estado }}:</div>
+        <ul>
+            {% for municipio in municipios %}
+                <li>{{ municipio }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <div class="d-flex justify-content-center mt-3">
+        <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+    </div>
+
+{% endblock %}

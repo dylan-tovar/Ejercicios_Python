@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo"><div class="interlineado">Producuion de Pan</div></div>
+
+<div class="pregunta2">la materia prima esta en buen estado?</div>
+<form action="{{ url_for('programa5_1') }}" method="POST">
+  <button type="submit" class="btn btn-primary" name="decision" value="si">
+    Sí
+  </button>
+  <button type="submit" class="btn btn-primary" name="decision" value="no">
+    No
+  </button>
+</form>
+
+<div class="d-flex justify-content-center mt-3">
+  <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+</div>
+
+{% endblock %}

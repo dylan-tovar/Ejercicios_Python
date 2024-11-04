@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo"><div class="interlineado">Producuion</div></div>
+<div class="centrar">
+  <div class="pregunta2">
+    Ya veo, los panes no cumplen con la calidad necesaria.
+  </div>
+  <div class="pregunta2">
+    <div class="interlineado2">
+      bueno nos tendremos que devolver a Producion y hacer nuevos panes.
+    </div>
+  </div>
+
+  <form action="{{ url_for('pagar') }}" method="POST">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      name="VolveraProduccion"
+      value="no"
+    >
+      Volver a Produccion
+    </button>
+  </form>
+</div>
+
+{% endblock %}

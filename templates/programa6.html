@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo2">
+  <div class="interlineado">
+    solicitud para el finianciamiento de una empresa
+  </div>
+</div>
+
+<div class="luna">Selecciona una opcion</div>
+
+<div class="botones" style="display: flex; gap: 10px">
+  <form action="{{ url_for('credito') }}" method="POST">
+    <button type="submit" class="btn btn-primary" name="C_calidad" value="no">
+      Crédito Bancario
+    </button>
+  </form>
+  <form action="{{ url_for('capital') }}" method="POST">
+    <button type="submit" class="btn btn-primary" name="C_calidad" value="no">
+      Aumento de capital social
+    </button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+        <div class="titulo">Resultado</div>
+        <p>Has elegido cocinar el huevo de forma: <strong>{{ metodo }}</strong></p>
+
+        <div class="interlineado"><h2><strong>¿Deseas agregar sal?</h2></div></strong>
+        <form action="/resultado" method="post">
+            <span style="display:inline-block; width:100px;"></span>
+            <button type="submit" name="sal" value="s" class="btn btn-primary">Sí</button>
+            <button type="submit" name="sal" value="n" class="btn btn-primary">No</button>
+            <input type="hidden" name="metodo" value="{{ metodo }}">
+        </form>
+    
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Menú{% endblock %}
+
+{% block content %}
+<menu>Menu Principal</menu>
+
+    <div class="titulo"> Estructuras de Datos </div>
+    <ul>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('cola') }}">Cola (Queue)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('pila') }}">Pila (Stack)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('arbol') }}">Árbol (Tree)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('grafo') }}">Grafo (Graph)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('arreglo') }}">Arreglo (Array)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('hash_table') }}">Hash (Tabla Hash)</a></cuadrado></li></div>
+        <div class="centrar"><li><cuadrado><a href="{{ url_for('lista_estructura') }}">Lista (List)</a></cuadrado></li></div>
+    </ul>
+
+
+<div class="titulo"> Arreglos </div>
+<ul>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('arreglo1') }}">Lista</a></cuadrado></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('arreglo2') }}">Estados</cuadrado></a></li></div>
+</ul>
+
+<div class="titulo"> Diagramas de Flujo </div>
+<ul>
+    
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa1') }}">Gestión de Inventario</cuadrado></a></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa2') }}">Calculadora de la Resolvente</cuadrado></a></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa3') }}">Cocción de huevo</cuadrado></a></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa4') }}">Lampara</cuadrado></a></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa5') }}">Producuion de Pan</cuadrado></a></li></div>
+    <div class="centrar"><li><cuadrado><a href="{{ url_for('programa6') }}">Finaciamiento de una Empresa</cuadrado></a></li></div>
+</ul>
+{% endblock %}

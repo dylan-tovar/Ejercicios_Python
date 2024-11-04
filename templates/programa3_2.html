@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<body>
+  <div class="titulo">Resultado Final</div>
+  <div class="size6">
+    Has elegido cocinar el huevo de la forma: <strong>{{ metodo }}</strong>
+  </div>
+  {% if sal == 's' %}
+  <div class="resultado">Agregando sal...</div>
+  {% else %}
+  <div class="resultado">No se agregará sal.</div>
+  {% endif %}
+  <div class="resultado">Serviendo en el plato...</div>
+  <div class="size5">++++++++++++++ ¡Buen provecho! ++++++++++++++</div>
+  <div class="d-flex justify-content-center mt-3">
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+  </div>
+</body>
+
+{% endblock %}

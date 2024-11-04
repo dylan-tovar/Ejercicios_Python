@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="titulo"><div class="interlineado">Departamento de Ventas</div></div>
+
+<div class="centrar">
+  <div class="pregunta2">Lista de panes disponibles</div>
+
+  <div class="resultado">
+    <form action="{{ url_for('comprar_panes') }}" method="POST" id="panForm">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <div class="Bc"></div>
+              Tipo de Pan
+            </th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pan canilla</td>
+            <td>
+              <input type="number" name="cantidad_canilla" min="0" value="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>Pan campesino</td>
+            <td>
+              <input
+                type="number"
+                name="cantidad_campesino"
+                min="0"
+                value="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Pan dulce</td>
+            <td>
+              <input type="number" name="cantidad_dulce" min="0" value="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>Pan de guayaba</td>
+            <td>
+              <input type="number" name="cantidad_guayaba" min="0" value="0" />
+            </td>
+          </tr>
+          <tr>
+            <td>Pan de queso</td>
+            <td>
+              <input type="number" name="cantidad_queso" min="0" value="0" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="espaci2">
+        <button type="submit" class="btn btn-primary">Comprar</button>
+      </div>
+    </form>
+    {% if error_message %}
+    <div class="alert alert-danger mt-3">{{ error_message }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="centrar">
+  <div class="espaci2">
+    <div class="d-flex justify-content-center mt-5">
+      <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

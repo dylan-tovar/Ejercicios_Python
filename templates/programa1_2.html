@@ -1,0 +1,100 @@
+{% extends 'base.html' %} {% block title %}Gestión de Inventario{% endblock %}
+{% block content %}
+<div class="titulo">Gestión de Inventario</div>
+
+{% if mensaje %}
+<p>{{ mensaje }}</p>
+{% endif %}
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+{% if request.args.get('accion') == 'agregar' %} {% if not mensaje %}
+<div class="f2">Añadir Artículo al Inventario</div>
+<form method="POST">
+  <label for="nombre_producto">Nombre del Producto:</label>
+  <input
+    type="text"
+    step="any"
+    class="form-control"
+    id="nombre_producto"
+    name="nombre_producto"
+    required
+  />
+  <br />
+  <label for="cantidad">Cantidad:</label>
+  <input
+    type="number"
+    step="any"
+    class="form-control"
+    id="cantidad"
+    name="cantidad"
+    required
+  />
+  <br />
+  <button type="submit" class="btn btn-primary" name="agregar">
+    Añadir Artículo
+  </button>
+
+  <div class="d-flex justify-content-center mt-3">
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+  </div>
+</form>
+{% else %}
+<!-- Mostrar botones después de añadir el producto -->
+<h2><div class="interlineado">Opciones</div></h2>
+<div style="display: flex; gap: 10px">
+  <form action="{{ url_for('programa1_2') }}" method="GET">
+    <button type="submit" class="btn btn-primary" name="accion" value="agregar">
+      Añadir Otro Producto
+    </button>
+  </form>
+  <form action="{{ url_for('programa1_2') }}" method="GET">
+    <button type="submit" class="btn btn-primary" name="accion" value="comprar">
+      Comprar Producto
+    </button>
+  </form>
+  <form action="{{ url_for('menu') }}" method="GET">
+    <button type="submit" class="btn btn-primary" calas>Ir al Menú</button>
+  </form>
+</div>
+{% endif %} {% elif request.args.get('accion') == 'comprar' %} {% if not mensaje
+%}
+<h2><div class="luna">Realizar una Compra</div></h2>
+<form method="POST">
+  <label for="producto">Nombre del Producto:</label>
+  <input
+    type="text"
+    step="any"
+    class="form-control"
+    id="producto"
+    name="producto"
+    required
+  />
+  <br />
+  <button type="submit" class="btn btn-primary" name="comprar">Comprar</button>
+  <div class="d-flex justify-content-center mt-3">
+    <a href="{{ url_for('menu') }}" class="btn btn-primary">Ir al Menú</a>
+  </div>
+</form>
+{% else %}
+<!-- Mostrar botones después de realizar la compra -->
+<h2><div class="interlineado">Opciones</div></h2>
+<div style="display: flex; gap: 10px">
+  <form action="{{ url_for('programa1_2') }}" method="GET">
+    <button type="submit" class="btn btn-primary" name="accion" value="agregar">
+      Añadir Otro Producto
+    </button>
+  </form>
+  <form action="{{ url_for('programa1_2') }}" method="GET">
+    <button type="submit" class="btn btn-primary" name="accion" value="comprar">
+      Comprar Producto
+    </button>
+  </form>
+  <form action="{{ url_for('menu') }}" method="GET">
+    <button type="submit" class="btn btn-primary">Ir al Menú</button>
+  </form>
+</div>
+{% endif %} {% else %}
+<p>Por favor, seleccione una opción en el menú principal.</p>
+{% endif %} {% endblock %}
