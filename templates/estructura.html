@@ -1,37 +1,34 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
+<!-- Título con estilo centrado -->
+<h1 class="text-center mb-4">{{ nombre }}</h1>
 
- 
-   <!-- Título con estilo centrado -->
-   <h1 class="text-center mb-4">{{ nombre }}</h1>
+<!-- Explicación en un parágrafo centrado y estilizado -->
+<p class="text-center lead mb-4">{{ explicacion }}</p>
 
-   <!-- Explicación en un parágrafo centrado y estilizado -->
-   <p class="text-center lead mb-4">{{ explicacion }}</p>
-
-    <!-- Sección de Código de Ejemplo -->
-    <div class="card mb-4">
-    <div class="card-header bg-primary text-white">
-      <h2 class="h5 mb-0">Código de Ejemplo:</h2>
-    </div>
-    <div class="card-body">
-      <pre class="bg-light p-3 rounded"><code>{{ codigo }}</code></pre>
-    </div>
-    </div>
-
-    <!-- Sección de Resultado -->
-    <div class="card mb-4">
-    <div class="card-header bg-success text-white">
-      <h2 class="h5 mb-0">Resultado:</h2>
-    </div>
-    <div class="card-body">
-      <pre class="bg-light p-3 rounded"><code>{{ resultado }}</code></pre>
-    </div>
+<!-- Sección de Código de Ejemplo -->
+<div class="card mb-4">
+  <div class="card-header bg-primary text-white">
+    <h2 class="h5 mb-0">Código de Ejemplo:</h2>
   </div>
-
-  <!-- Botón de regreso al menú centrado -->
-  <div class="d-flex justify-content-center mt-4">
-    <a href="{{ url_for('menu') }}" class="btn btn-primary">Volver al Menú</a>
+  <div class="card-body">
+    <pre class="bg-light p-3 rounded"><code>{{ codigo }}</code></pre>
   </div>
+</div>
+
+<!-- Sección de Resultado -->
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h2 class="h5 mb-0">Resultado:</h2>
+  </div>
+  <div class="card-body">
+    <pre class="bg-light p-3 rounded"><code>{{ resultado }}</code></pre>
+  </div>
+</div>
+
+<!-- Botón de regreso al menú centrado -->
+<div class="d-flex justify-content-center mt-4">
+  <a href="{{ url_for('menu') }}" class="btn btn-primary">Volver al Menú</a>
+</div>
 
 {% endblock %}
